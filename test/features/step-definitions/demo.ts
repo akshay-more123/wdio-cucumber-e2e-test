@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@cucumber/cucumber";
+import { Given,When,Then} from "@cucumber/cucumber";
 import chai from "chai";
 
 
@@ -29,36 +29,32 @@ Then(/^URL should match (.*)$/, async function (expectedURL) {
     chai.expect(url).to.equal(expectedURL);
 })
 
-// Then(`/^URL should match(.*)$/`, async function(expectedurl)
-// {
+Given(/^A web page is opened$/, async function()
+{
 
-//     console.log(`>> expectedurl: ${expectedurl}`);
-// })
+    await driver.url("https://the-internet.herokuapp.com/")
+    await driver.setTimeout({implicit:15000,pageLoad:10000})
+    await driver.maximizeWindow();
+})
+
+When(/^Perfom web interactions$/,async function()
+{
+
+    let ele_num = await browser.$("//a[text()='Inputs']");
+    await ele_num.click();
+
+    let input = await browser.$(`[type="number"]`)
+    await input.setValue(12345);
+})
+
+
+
+
      
 
 
     
 
-
-// When(/^Search with (.*)$/, async function (searchItem) {
     
-//     let ele = await $(`[name=q]`)
-//     await ele.setValue(searchItem)
-//     await browser.keys("Enter")
-// })
 
-// Then(/^Click on the first search result$/, async function () {
-    
-//     let ele = await $(`<h3>`)
-//     ele.click()
-// })
-
-// Then(/^URL should match (.*)$/, async function (expectedURL) {
-//     await browser.waitUntil(async function () {
-//         return await browser.getTitle() === "WebdriverIO · Next-gen browser and mobile automation test framework for Node.js | WebdriverIO"
-//     }, {timeout: 20000, interval: 500, timeoutMsg: `Failed loading WDIO web page: ${await browser.getTitle()}`})
-
-//     let url = await browser.getUrl()
-    
-// })
 
