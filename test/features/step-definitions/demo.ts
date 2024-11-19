@@ -44,7 +44,7 @@ When(/^Perfom web interactions$/,async function()
     await ele_num.click();
 
     let input = await browser.$(`[type="number"]`)
-    await input.setValue(12345);
+    await input.setValue(12345);9
 })
 
 
