@@ -34,11 +34,11 @@
     "@wdio/types": "^9.2.2",
     "chai": "^4.4.1",
     "dotenv": "^10.0.0",
-    "geckodriver": "^3.2.0",
+    "geckodriver": "^5.0.0",
     "supertest": "^6.3.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
-    "wdio-geckodriver-service": "^2.1.2",
+    "wdio-geckodriver-service": "^5.0.2",
     "winston": "^3.13.0"
   }
 }
