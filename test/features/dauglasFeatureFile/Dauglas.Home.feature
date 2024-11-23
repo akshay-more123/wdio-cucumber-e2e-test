@@ -9,11 +9,11 @@ Feature: Login Page Actions
   Scenario:<TestID>: Selecting and verifying flags checkboxes
     When I open the 'flags' dropdown
     And I select the 'Sale' checkbox
-    # Then the 'Sale' checkbox should be checked
+    Then the 'Sale' checkbox should be checked
     When I select the 'NEU' checkbox
-    # Then the 'NEU' checkbox should be checked
+    Then the 'NEU' checkbox should be checked
     When I select the 'Limitiert' checkbox
-    # Then the 'Limitiert' checkbox should be checked
+    Then the 'Limitiert' checkbox should be checked
     Examples:
       | TestID     |
       | INTV_TC001 |

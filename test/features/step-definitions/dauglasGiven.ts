@@ -29,9 +29,9 @@ Given(/^I open the login page and I accept the cookies$/, async function () {
 
 When(/^I click on perfume section$/, async () => {
   try {
-    reporter.addStep(testId, "info", "Login to sause demo..");
+    reporter.addStep(testId, "info", "click on perfume section..");
     //testId = this.testid;
-    reporter.addStep(testId, "info", "Login to sause demo..");
+    
     await dauglasHomePage.clickOnPerfume(testId);
     await browser.pause(2000);
     // Select an element to move the mouse to (could be an off-screen element or an arbitrary one)
@@ -48,11 +48,11 @@ When(/^I click on perfume section$/, async () => {
   }
 });
 
-// Then(/^I should be on the homepage$/, async () => {
-//   const title = await browser.getTitle();
-//   console.log(`>> the title name is: ${title}`);
-//   chai.expect(title).to.equal('Online-Parfümerie ✔️ Parfum & Kosmetik kaufen | DOUGLAS');  // Adjust this assertion based on your site
-// });
+Then(/^I should be on the homepage$/, async () => {
+  const title = await browser.getTitle();
+  console.log(`>> the title name is: ${title}`);
+  chai.expect(title).to.equal('Online-Parfümerie ✔️ Parfum & Kosmetik kaufen | DOUGLAS');  // Adjust this assertion based on your site
+});
 
 // Given(/^I am on the homepage$/, async () => {
 //   await browser.url('https://yourwebsite.com');
