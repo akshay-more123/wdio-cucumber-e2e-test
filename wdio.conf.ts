@@ -67,10 +67,10 @@ export const config: Options.Testrunner = {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             useCucumberStepReporter: true,
-            reportedEnvironmentVars: {
-                Environment: 'TEST',
-                App: 'Customer UI',
-            },
+            // reportedEnvironmentVars: {
+            //     Environment: 'TEST',
+            //     App: 'Customer UI',
+            // },
         }]
     ],
 

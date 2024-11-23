@@ -1,5 +1,7 @@
 import { Given,When,Then } from "@wdio/cucumber-framework";
 import chai from "chai";
+import reporter from "../../helper/reporter.js"
+import logger from "../../helper/logger.js"
 
 Then(/^Validate all products have valid price$/, async function()
 {
@@ -24,3 +26,25 @@ for(let i = 0; i<leng; i++)
 
 }
 )
+
+
+// Then(/^Inventory page should (.*)\s?list (.*)$/, async function (negativeCheck, noOfProducts) {
+//     try {
+//         if (!noOfProducts)
+//             throw Error(`Invalid product count provided: ${noOfProducts}`);
+//         let eleArr = await $$(`.inventory_item_name`);
+//         try {
+//             chai.expect(eleArr.length).to.equal(parseInt(noOfProducts)); // ===
+//         } catch (err) {
+//             reporter.addStep(this.testid, "error", "Known issue - product count mismatch", true, "JIRA-123")
+//         }
+//     } catch (err) {
+//         console.log(`>> The type of err: ${typeof err}`);
+//         console.log(`>> The name property : ${err.name}`);
+//         console.log(`>> The message property : ${err.message}`);
+//         err.message = `${this.testid}: Failed when comparing product count, ${err.message}`
+//         throw err // Failing
+//         logger.error(err.message)
+
+//     }
+// });
