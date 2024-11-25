@@ -12,7 +12,7 @@ Given(/^I open the login page and I accept the cookies$/, async function () {
     testId = this.testid;
     
     await browser.url("https://www.douglas.de/de");
-    await browser.setTimeout({ implicit: 15000, pageLoad: 10000 });
+    //await browser.setTimeout({ implicit: 15000, pageLoad: 10000 });
     await browser.maximizeWindow()
     await dauglasHomePage.handleCoockies(this.testid);
   } catch (err) {

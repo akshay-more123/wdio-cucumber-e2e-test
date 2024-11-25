@@ -41,9 +41,9 @@ class PerfumePage extends Dauglas_Page {
 
   async selectSaleOption() {
     try {
-      //await this.clickOnFlagsDropdown()
+      
       await this.selectSaleCheckbox(await this.saleCheckBox);
-      //await browser.pause(1000); 
+      
     } catch (err) {
       err.message = `Error clicking login button, ${err.message}`;
       throw err;

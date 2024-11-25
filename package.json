@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "test:debug": "export DEBUG=Y && export HEADLESS=N && wdio run config/wdio.test.conf.ts --cucumberOpts.tagExpression='@demo' > output.txt",
-    "test:demo": "export DEBUG=N && export HEADLESS=N && wdio run config/wdio.test.conf.ts --cucumberOpts.tagExpression='@demo'",
+    "test:demo": "wdio run wdio.conf.ts --cucumberOpts.tagExpression='@demo'",
     "test:smoke": "export DEBUG=N&& export HEADLESS=Y&& wdio run config/wdio.test.conf.ts --cucumberOpts.tagExpression='@smoke'",
     "uat:demo": "export DEBUG=N && export HEADLESS=N && wdio run config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@demo'",
     "uat:smoke": "export DEBUG=N && export HEADLESS=Y && wdio run config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@smoke'",

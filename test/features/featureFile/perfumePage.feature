@@ -1,9 +1,9 @@
-Feature: Login Page Actions
+Feature: Verifying Perfume Page
 
   Background:
     Given I open the login page and I accept the cookies
     When I click on perfume section
-    #Then I should be on the homepage
+    Then I should be on the homepage
 
   @demo
   Scenario:<TestID>: Selecting and verifying flags checkboxes
@@ -17,11 +17,4 @@ Feature: Login Page Actions
     Examples:
       | TestID     |
       | INTV_TC001 |
-  # Scenario: Navigating to the Parfum section
-  #   Given I am on the homepage
-  #   When I go to the Parfum section
-  #   Then I should be in the Parfum section
-  # Scenario: Selecting flag options
-  #   Given I am on the homepage
-  #   When I select the flag options "Option 1" and "Option 2"
-  #   Then the selected options should be applied
+  
