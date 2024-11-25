@@ -22,14 +22,14 @@ export default class Dauglas_Page {
   }
 
   async openFlagsDropdown(ele) {
-    await ele.waitForClickable({ timeout: 5000 });
+    await ele.waitForClickable({ timeout: 2000 });
     if (!ele.elementId) {
       throw Error(ele.error.message);
     }
     await ele.click();
   }
   async selectSaleCheckbox(ele) {
-    await ele.waitForClickable({ timeout: 5000 });
+    await ele.waitForClickable({ timeout: 2000 });
     if (!ele.elementId) {
       throw Error(ele.error.message);
     }
@@ -37,7 +37,7 @@ export default class Dauglas_Page {
   }
 
   async selectNeuCheckbox(ele) {
-    await ele.waitForClickable({ timeout: 5000 });
+    await ele.waitForClickable({ timeout: 2000 });
     if (!ele.elementId) {
       throw Error(ele.error.message);
     }
@@ -45,7 +45,7 @@ export default class Dauglas_Page {
   }
 
   async selectLimitiertCheckbox(ele) {
-    await ele.waitForClickable({ timeout: 5000 });
+    await ele.waitForClickable({ timeout: 2000 });
     if (!ele.elementId) {
       throw Error(ele.error.message);
     }
